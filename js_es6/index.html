@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <table id="table">
+    <tr>
+      <th>name</th>
+      <th>email</th>
+      <th>phone</th>
+    </tr>
+  </table>
+    <script>
+    let name="jone dole";
+    const pi=3.1416;
+  
+
+   //can't change constant value pi=4.14;
+   name="shomick hasan";
+     console.log(name);
+
+     const person={
+       "name":"jone due",
+       "email":"jone@gmail.com",
+       "phone": "01754253301",
+     }
+     // constant can added object property
+     person.phone="01754253301";
+     console.log(person);
+
+     //  arrow function
+  const student_info =(name=null,roll=null,reg=null)=>{
+      console.log("Name :"+name+"Roll :"+roll+"Reg :"+reg);
+   }
+   student_info('Shomick Hasan','110540',1112746395);
+   
+   seeWhoIam=(name)=> console.log("Hi ");
+
+   TableAppend=()=>{
+    document.getElementById('table').append("\
+    <tr>\
+      <td>"+person.name+"</td>\
+      <td>"+person.email+"</td>\
+      <td>"+person.phone+"</td>\
+    </tr>");
+   }
+
+   document.write(TableAppend());
+
+   document.write(`<h1>Name<h1>${person.name}`); 
+
+  let RAM ="4GB";
+  let SSD="128GB";
+   // normal javascript object notation 
+   let laptop ={
+         "RAM":RAM,
+         "SSD":SSD,
+         configuration:function(){
+          console.log(`this pc configure by RAM= ${this.RAM} and SSD= ${this.SSD}`);
+         }
+   }
+
+   console.log(laptop.configuration());
+
+   //es6 object notations programming
+   let laptopes6 ={
+    RAM,
+    SSD,
+    config(){
+      document.write(`<br>this pc configure by RAM= ${this.RAM} and SSD= ${this.SSD}`);
+    }
+   }
+
+   document.write(laptopes6.config());
+
+   //sprade operator
+   
+    summition =(...numbers)=>  numbers.reduce((o,n)=>o+n);
+
+
+   console.log(summition(1,2,3,4,5,6,7,8,9,65));
+
+  //===========================================distructuring=======================================
+
+    //array element
+
+    const number=[1,2,3,4,5,6];
+
+    const [a,b,...num]=number;
+
+    console.log(a,b,num);
+
+    //object 
+
+    const property ={
+      "table":"foldable table",
+      "chear":"RFL cheair",
+      "wardobe":"Theree doir wardobe",
+      
+    }
+
+    const {table,...currentpro}=property;
+    console.log(table,currentpro);
+
+  //=================================================for in and for of loop============================
+ //perform in array 
+  const countries=['Dhaka','Rajshahi','Rangpur','Borishal'];
+
+    for(  country in countries ){
+      //only get array index
+     // console.log(countries[country]);
+    }
+
+    for(state of countries){
+      document.write(`${state}<br>`);
+    } 
+
+    // perform in object 
+
+    let room ={
+      "room_number":301,
+      "building_name":"ABC square",
+      "Address":"Rajshahi",
+      "District":"Natore",
+      "Union":"Natore",
+    }
+
+    for(ghor in room ){
+      console.log(ghor+':'+room[ghor]);
+    } 
+   
+</script>
+</body>
+</html>

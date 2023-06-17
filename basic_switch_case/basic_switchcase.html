@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*basic switch case stracture 
+        switch(parameter){
+            case(condition):
+            statement;
+            break;
+
+            case2(condition):
+            statement;
+            breake;
+            defoult:
+            statement
+
+
+            50-100  buira,
+            16-30 juboti,
+
+        
+        }*/ 
+
+        var age = 60;
+        switch(true){
+            case( age>50 && age<100):
+            document.write('tumi akta buira');
+            break;
+            case(age>16 && age<30):
+            document.write('tumi juboti');
+            break;
+            default:
+            document.write('expaired');
+
+            
+        }
+
+        //js for loop with continue and break  
+
+        var i;
+        for(i=0; i<10 ; i++){
+             //(i===3) ? continue;
+            if(i===3){continue;}
+            document.write('<br>serial number is given='+i);
+
+        }
+
+        for(i=1; i<10 ; i++){
+            if(i===4){break}
+            document.write('<li> hellow'+i+'</li>');
+        }
+
+        //object 
+
+        var mobole ={
+            brand : "Sony Xperia",
+            Ram   :  '4gb',
+            Rom   : '128GB',
+        }
+
+       console.log(mobole.Ram);
+
+       // js array collection   
+
+       var city = ['rajshahi', 'rangpur', 'dinajpu','nilpjamary'];
+       console.log(city[0]);
+       for(var i=0 ; i<city.length; i++){
+        document.write('<li>'+city[i]+'</li>');
+       }
+
+       // forin loop
+
+       for(var item in city){
+            if(city[item]=='dinajpu')
+                break;
+            
+            document.write('<h1>'+city[item]+'<h1>');
+       }
+
+       // array concat  
+
+       var array1 = ['A','B','C','D'];
+       var array2 = ['D','E','F','G'];
+
+       var array3 = array1.concat(array2);
+       console.log(array3);
+
+       // array form 
+
+       var Text = "lorem ipsum free text"
+       var textToArray = Array.from(Text);
+       console.log(textToArray);
+
+       //array filter  
+
+       var FilterArray= textToArray.filter(function(item){
+                return item=="m";
+         });
+
+         console.log(FilterArray); 
+         // array foreach functon
+
+         var arraayForEachFunction = array1.forEach(function(item){
+                document.write("<h1>"+item+"</h1>");
+         }); 
+
+         setTimeout(function(){
+            alert('prem valobasar gusti chudi');
+         },10000);
+
+         let appName= navigator.appCodeName;
+         let platform = navigator.platform
+             document.write(appName);
+              document.write(platform);
+
+             // navigator.geolocation
+
+             navigator.geolocation.getCurrentPosition(function(p){
+                document.write("<h1>Latitude:<h1> " + position.coords.latitude);
+             });
+
+             
+
+
+    </script>
+</body>
+</html>
